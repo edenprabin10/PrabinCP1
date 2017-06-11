@@ -19,7 +19,26 @@ class Model_Customer extends CI_Model{
 
 	public function logincheck($username,$password){
 		$query=$this->db->where(['username'=>$username,'password'=>$password])->get('customer');
+		if($query->num_rows()>=1){
+			return $query->row()->customerid;
+			$this->session->set_customerdata($sess_array);
+			echo"login";
+		}else{
+			echo "login failed";
+		}
 	}
+
+public function addItem($itemname,$itemprice,$itemdescription){
+								
+		$array=array(
+			"itemname"=>$itemname,
+			"itemprice"=>$itemprice,
+			"itemdescription"=>$itemdescription			
+		);
+		$this->db->insert("item",$array); //Active Records
+		return "Data saved";
+	}
+
 }
 ?>
 

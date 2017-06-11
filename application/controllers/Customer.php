@@ -25,43 +25,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		
 		
 		public function login(){
-			$this->load->library('form_validation');
-			$this->form_validation->set_rules('username','username',
-					'required|trim|min_length[3]|max_length[20]');
-					
-			$this->form_validation->set_rules('password','password',
-					'required|trim|min_length[5]|max_length[15]');
-		if ($this->form_validation->run()){
 			$username=$this->input->post('username');
 			$password=$this->input->post('password');
-			
+
 			$this->load->model('Model_Customer');
 			$result=$this->Model_Customer->logincheck($username,$password);
 			if ($result){
 				if ($result==1){
-					return redirect('Welcome/admindash');
+					return redirect('Home/admindash');
 				}else{
 					$this->load->library('session');
 					$this->session->set_userdata('customerid',$result);
-					echo "customer login";
+					return redirect('Home/customerdash');
+					/*echo "customer login";*/
 					
 				}
 			}else{
 				echo ("password not match");
 			}
-			}
-			else{
-				$this->load->view('login');
-			}
 				
 				
-					//echo "customer login";
-					//$data['msg']="successfull";
-					//$this->load->view("message",$data);
-				//echo "login bhayo";
+			
 			
 	}
-	}
 
+
+	public function additem(){
+		
+			$itemname=$this->input->post('itemname');
+			$itemprice=$this->input->post('itemprice');
+			$itemdescription=$this->input->post('itemdescription');
+			$this->load->model('Model_Customer');
+			
+			$data['message']=$this->Model_Customer->addItem
+							($itemname,$itemprice,$itemdescription);
+							
+			 //$this->load->view('login');
+			echo "successfull";
+		} 
+		
+	}
 ?>
 

@@ -22,4 +22,19 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('admindash');
 	}
+
+	public function customerdash()
+	{
+		$this->load->view('customerdash');
+	}
+	
+	public function additem()
+	{
+		$this->load->view('additem');
+	}
+
+	public function updatecustomer()
+	{
+		$this->load->view('updatecustomer');
+	}
 }

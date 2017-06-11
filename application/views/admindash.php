@@ -49,19 +49,19 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="dashboard.html" target="main">
                         <i class="ti-panel"></i>
                         <p> Admin Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="user.html" target="main">
                         <i class="ti-user"></i>
                         <p>User Profiles</p>
                     </a>
                 </li>
                 <li>
-                    <a href="table.html">
+                    <a href="table.html" target="main">
                         <i class="ti-view-list-alt"></i>
                         <p>Menu Items</p>
                     </a>
@@ -147,7 +147,7 @@
                
                 </nav>
                 <div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
+                    &copy; <script>document.write(new Date().getFullYear())</script>, Made with <i class="fa fa-heart heart"></i> by Prabin Shakya
                 </div>
             </div>
         </footer>
