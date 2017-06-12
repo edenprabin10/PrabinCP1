@@ -64,6 +64,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			echo "successfull";
 		} 
 		
-	}
+
+		public function selectcustomer(){
+			$this->load->model("Model_Customer");
+			$data['message']=$this->Model_Customer->selectcustomer();
+						 $this->load->view('user',$data);// 
+							
+
+
+		}
+
+		public function deletecustomer(){
+			$id = $this->uri->segment(3);
+			$this->load->model('Model_Customer');
+			$data['message']=$this->Model_Customer->deletecustomer($id);
+			// $this->load->view('user');
+			echo "deleted";		
+		}
+}	
 ?>
+
 

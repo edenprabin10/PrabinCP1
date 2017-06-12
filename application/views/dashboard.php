@@ -19,6 +19,7 @@
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">About</a></li>
 				  <li><a href="<?php echo site_url('Home/register') ?>">Register</a></li>
+                  <li><a href="<?php echo site_url('Home/login') ?>">Sign In</a></li>
                 </ul>
             </nav>
             

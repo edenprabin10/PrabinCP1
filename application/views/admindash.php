@@ -49,36 +49,24 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html" target="main">
+                    <a href="dashboard.html" target="main-panel">
                         <i class="ti-panel"></i>
                         <p> Admin Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html" target="main">
+                    <a href="user.html" target="main-panel">
                         <i class="ti-user"></i>
-                        <p>User Profiles</p>
+                        <p>Customer Profiles</p>
                     </a>
                 </li>
                 <li>
-                    <a href="table.html" target="main">
+                    <a href="table.html" target="main-panel">
                         <i class="ti-view-list-alt"></i>
                         <p>Menu Items</p>
                     </a>
                 </li>
-                <li>
-                    <a href="typography.html">
-                        <i class="ti-text"></i>
-                        <p>Typography</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="icons.html">
-                        <i class="ti-pencil-alt2"></i>
-                        <p>Icons</p>
-                    </a>
-                </li>
-               
+                          
                 
 				
             </ul>
@@ -115,9 +103,7 @@
                               <ul class="dropdown-menu">
                                 <li><a href="#">Logout</a></li>
                                 <li><a href="#">Edit Profile</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
+                                
                               </ul>
                         </li>
 						<!-- <li>

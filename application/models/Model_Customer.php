@@ -39,6 +39,19 @@ public function addItem($itemname,$itemprice,$itemdescription){
 		return "Data saved";
 	}
 
+
+public function selectcustomer(){
+	
+	$query = $this->db->get('customer');
+	return $query->result();
+
+}
+
+public function deletecustomer($id){
+			$this->db->where('customerid',$id);
+			$this->db->delete('customer');
+		}
+	
 }
 ?>
 
