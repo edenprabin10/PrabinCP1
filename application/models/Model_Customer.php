@@ -38,7 +38,17 @@ public function addItem($itemname,$itemprice,$itemdescription){
 		$this->db->insert("item",$array); //Active Records
 		return "Data saved";
 	}
+	
+	public function addCategory($categoryname){
+								
+		$array=array(
+			"categoryname"=>$categoryname			
+		);
+		$this->db->insert("category",$array); //Active Records
+		return "Data saved";
+	}
 
+	
 
 public function selectcustomer(){
 	

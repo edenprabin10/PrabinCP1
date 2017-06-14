@@ -8,7 +8,7 @@
 	<body>
 	
 		<div class="container">
-			<img src="<?php echo base_url();?>assets/img/signin.png">
+			<img src="<?php echo base_url();?>assets/img/login.png">
 			<form method="post" action="<?php echo base_url();?>/index.php/Customer/login">
 				<div class="form-input">
 			   

@@ -68,7 +68,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		public function selectcustomer(){
 			$this->load->model("Model_Customer");
 			$data['message']=$this->Model_Customer->selectcustomer();
-						 $this->load->view('user',$data);// 
+			$this->load->view('user',$data);// 
 							
 
 
@@ -78,9 +78,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$id = $this->uri->segment(3);
 			$this->load->model('Model_Customer');
 			$data['message']=$this->Model_Customer->deletecustomer($id);
-			// $this->load->view('user');
-			echo "deleted";		
+			 $this->load->view('admindash');
 		}
+		
+		
+	public function addcategory(){
+		
+			$categoryname=$this->input->post('categoryname');
+			$this->load->model('Model_Customer');
+			
+			$data['message']=$this->Model_Customer->addcategory
+							($categoryname);
+							
+			 $this->load->view('addcategory',$data);
+			 return redirect('home/admindash');
+
+
+			
+		} 
+		
 }	
 ?>
 

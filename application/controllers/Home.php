@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('dashboard');
+		$this->load->view('dashboard1');
 	}
 	
 	public function register()
@@ -36,5 +36,13 @@ class Home extends CI_Controller {
 	public function updatecustomer()
 	{
 		$this->load->view('updatecustomer');
+	}
+
+	public function deletecustomer(){
+		$this->load->view('user');
+	}
+	
+	public function addcategory(){
+		$this->load->view('addcategory');
 	}
 }

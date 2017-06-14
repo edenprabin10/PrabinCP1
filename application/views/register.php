@@ -8,7 +8,7 @@
 	
 		<div class="container">
 			
-			<img src="<?php echo base_url();?>assets/img/signup.png">
+			<img src="<?php echo base_url();?>assets/img/signup.png" width="49">
 			<form action="<?php echo site_url('Customer/getRegister') ?>" method="post">
 				<div class="form-input">
 			    <input type="text" name="firstname" placeholder="Enter Firstname">				

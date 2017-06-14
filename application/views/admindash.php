@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="user.html" target="main-panel">
+                    <a href="<?php echo site_url('Home/user') ?>" target="main-panel">
                         <i class="ti-user"></i>
                         <p>Customer Profiles</p>
                     </a>

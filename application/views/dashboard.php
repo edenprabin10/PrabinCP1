@@ -5,7 +5,7 @@
         <title>Home</title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/Stylesheet.css" />
     </head>
-    <body>
+    <body background-image="">
         <div id="wrapper" >
 
 		
@@ -16,9 +16,8 @@
                 <ul id="nav">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="#">Coffee</a></li>
-                    <li><a href="#">Shop</a></li>
                     <li><a href="#">About</a></li>
-				  <li><a href="<?php echo site_url('Home/register') ?>">Register</a></li>
+                    <li><a href="<?php echo site_url('Home/register') ?>">Register</a></li>
                   <li><a href="<?php echo site_url('Home/login') ?>">Sign In</a></li>
                 </ul>
             </nav>
