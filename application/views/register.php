@@ -42,7 +42,7 @@
 				</div>
 				
 				<button type="submit" name="submit" value="Sign Up" class="btn-login"> Sign Up </button>
-				<a href="#"> Forget Password ?</a>
+				<a href="#"> Forget Password ?</a> <br>
 				
 			</form>
 		</div>

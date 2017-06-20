@@ -30,8 +30,8 @@ class Home extends CI_Controller {
 	
 	public function additem()
 	{
-		$this->load->view('additem');
-	}
+            $this->load->view('additem');
+    }
 
 	public function updatecustomer()
 	{
@@ -45,4 +45,9 @@ class Home extends CI_Controller {
 	public function addcategory(){
 		$this->load->view('addcategory');
 	}
+
+	public function selectcategory(){
+		$this->load->view('selectcategory');
+	}
+
 }

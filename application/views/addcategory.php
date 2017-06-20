@@ -7,16 +7,16 @@
 	<body>
 	
 		<div class="container">
+			<h1> Add Category </h1>
 			
-			
-			<form action="<?php echo base_url();?>/index.php/Customer/addcategory" method="post">
+			<form action="<?php echo base_url();?>/index.php/Admin/addCategory" method="post">
 				<div class="form-input">
 			    <input type="text" name="categoryname" placeholder="Enter Category Name">				
 				</div>				
 				
 				
 				
-				<button type="submit" name="submit" value="Sign Up" class="btn-login"> Add Item </button>
+				<button type="submit" name="submit" value="Sign Up" class="btn-login"> Add Category </button>
 				
 				
 			</form>

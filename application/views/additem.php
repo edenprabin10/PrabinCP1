@@ -2,14 +2,15 @@
 <html>
 <head>
 	<title> Adding Item</title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/additem.css"> </link>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/additem.css"> 
 		</head>
-	<body>
-	
+	<body>	
 		<div class="container">
 			
 			
-			<form action="<?php echo site_url('Customer/addItem') ?>" method="post">
+			<?php echo form_open_multipart(base_url()."admin/additem/");?>
+
+			<form action="<?php echo base_url();?>/admin/additem" method="post">
 				<div class="form-input">
 			    <input type="text" name="itemname" placeholder="Enter Item Name">				
 				</div>				
@@ -22,12 +23,13 @@
 				</div>
 				
 				<div class="form-input">
-				<input type="text" name="username" placeholder="Enter Image">				
 				</div>
+				<!-- <div class="form-input">
+				<input type="file" name="file" placeholder="Select Image">				
+				</div>
+				 -->
 				
-				
-				<button type="submit" name="submit" value="Sign Up" class="btn-login"> Add Item </button>
-				
+			<button>	<input type="submit" name="submit" value="upload" class="btn-login"> </button>
 				
 			</form>
 		</div>

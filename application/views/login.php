@@ -23,7 +23,9 @@
 				
 			
 				<input type="submit" name="submit" value="Sign In" class="btn-login">
-				<a href="#"> Forget Password ?</a>
+				<a href="#"> Forget Password ?</a><br> <br>
+				<a href="http://localhost/aaa/Home/register" style="color:white;"> Not Register Yet? Register Now!! </a>
+
 				
 			</form>
 		</div>

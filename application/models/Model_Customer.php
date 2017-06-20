@@ -44,10 +44,27 @@ public function addItem($itemname,$itemprice,$itemdescription){
 		$array=array(
 			"categoryname"=>$categoryname			
 		);
+		$this->load->model('Model_Admin');
 		$this->db->insert("category",$array); //Active Records
 		return "Data saved";
 	}
 
+
+public function updateCustomerProfile($customerID,$first_name,$last_name,$username,$password,$email,
+				$address,$mobile_no){
+		$array=array(
+			"first_name"=>$first_name,
+			"last_name"=>$last_name,
+			"username"=>$username,
+			"password"=>$password,
+			"email"=>$email,
+			"address"=>$address,
+			"mobile_no"=>$mobile_no
+		);
+		$this->db->where("customerid",$customerid);
+		$this->db->update('customer',$array);
+		return "data updated";
+	}
 	
 
 public function selectcustomer(){
@@ -56,11 +73,26 @@ public function selectcustomer(){
 	return $query->result();
 
 }
-
 public function deletecustomer($id){
 			$this->db->where('customerid',$id);
 			$this->db->delete('customer');
 		}
+	
+
+public function selectitem(){
+	
+	$query = $this->db->get('item');
+	return $query->result();
+
+}
+
+public function deleteitem($id){
+			$this->db->where('itemid',$id);
+			$this->db->delete('item');
+		}
+	
+
+
 	
 }
 ?>

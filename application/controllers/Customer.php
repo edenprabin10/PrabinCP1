@@ -1,8 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 	class Customer extends CI_Controller {
-
 		public function getRegister(){
 		
 			$firstname=$this->input->post('firstname');
@@ -12,7 +10,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$email=$this->input->post('email');
 			$address=$this->input->post('address');
 			$contactno=$this->input->post('contactno');
-
 			$this->load->model('Model_Customer');
 			
 			$data['message']=$this->Model_Customer->Register
@@ -27,7 +24,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		public function login(){
 			$username=$this->input->post('username');
 			$password=$this->input->post('password');
-
 			$this->load->model('Model_Customer');
 			$result=$this->Model_Customer->logincheck($username,$password);
 			if ($result){
@@ -48,8 +44,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			
 			
 	}
-
-
 	public function additem(){
 		
 			$itemname=$this->input->post('itemname');
@@ -64,16 +58,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			echo "successfull";
 		} 
 		
-
 		public function selectcustomer(){
 			$this->load->model("Model_Customer");
 			$data['message']=$this->Model_Customer->selectcustomer();
 			$this->load->view('user',$data);// 
 							
-
-
 		}
-
 		public function deletecustomer(){
 			$id = $this->uri->segment(3);
 			$this->load->model('Model_Customer');
@@ -81,6 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			 $this->load->view('admindash');
 		}
 		
+	
 		
 	public function addcategory(){
 		
@@ -92,12 +83,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							
 			 $this->load->view('addcategory',$data);
 			 return redirect('home/admindash');
-
-
 			
 		} 
+
+		
 		
 }	
 ?>
-
-
