@@ -1,40 +1,22 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	
-	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js');?>"> </script>
-	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.10.2.js');?>"> </script>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css');?>">
-	<table>
-	<thead>
-		<tr>
-			<td> First Name </td>
-			<td> Last Name </td>
-			<td> Username </td>
-			<td> Email </td>
-			<td> Address </td>
-			<td> Mobile No </td>
-			<td> Delete </td>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-<?php
-	foreach ($message as $row){
-		?>
-	<td> <?php echo $row->first_name; ?> </td>
-	<td> <?php echo $row->last_name; ?> </td>
-	<td> <?php echo $row->username; ?> </td>
-	<td> <?php echo $row->email; ?> </td>
-	<td> <?php echo $row->address; ?> </td>
-	<td> <?php echo $row->mobile_no; ?> </td>
-	<td> <a href="<?php echo base_url() . "index.php/admin/deletecustomer/" . $row->itemid; ?>">
-	<button>Delete</button></a> </td>
-	
-</tr>
-<?php
-}
-?>	
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Legend</legend>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Checkbox
+          </label>
+        </div>
+      </div>
+    
+  
+</form>

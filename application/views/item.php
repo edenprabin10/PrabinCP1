@@ -17,7 +17,12 @@
 	<td> <?php echo $row->itemdescription; ?> </td>
 
 	<td> <a href="<?php echo base_url() . "index.php/Admin/deleteitem/" . $row->itemid; ?>">
+
 	<button>Delete</button></a> </td>
+
+
+	<td> <a href="<?php echo base_url() . "index.php/Admin/updateitem/" . $row->itemid; ?>">
+		<button>Edit</button></a> </td>
 	
 </tr>
 <?php

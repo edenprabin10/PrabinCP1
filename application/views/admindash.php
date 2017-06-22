@@ -45,13 +45,13 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html" target="main-panel">
+                    <a href="<?php echo site_url('admin/admindash') ?>" target="main-panel">
                         <i class="ti-panel"></i>
                         <p> Admin Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo site_url('Home/user') ?>" target="main-panel">
+                    <a href="<?php echo site_url('admin/selectcustomer') ?>" target="main-panel">
                         <i class="ti-user"></i>
                         <p>Customer Profiles</p>
                     </a>
@@ -62,7 +62,12 @@
                         <p>Menu Items</p>
                     </a>
                 </li>
-                          
+                <li>
+                <a href="<?php echo site_url('Home/additem') ?>" target="main-panel">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Add Items</p>
+                    </a>
+                  </li>        
                 
 				
             </ul>

@@ -13,8 +13,8 @@
 <body>
 
 <div class="container">
-	<h1> Category List </h1>
-	<a href="<?php echo base_url();?>Home/selectcategory"> 
+	<h1>  Category List </h1>
+	<a href="<?php echo base_url();?>admin/listCategoryUpdate"> 
 		<!-- <img src="<?php echo base_url();?>assets/images/back.png" style="margin-left: -200px; margin-top:-17px;" /> -->
 	</a>
 	<table class="table table-striped table-hover ">
@@ -34,7 +34,9 @@
     <td><?php echo $row->categoryname?></td>
          
       <td>
-        <?php echo anchor('admin/addcategory', 'Add Post',['class'=>'label label-success']); ?>
+        <?php echo anchor('admin/addcategory', 'Add Post',['class'=>'label label-primary']); ?>
+        <?php echo anchor('admin/updatecategory', 'Update Post',['class'=>'label label-success']); ?>
+
        
       </td>
     </tr>

@@ -54,7 +54,8 @@
                 
                 <li><a href="#facts">Facts</a></li>
                 <li><a href="#food-menu">Food Menu</a></li>
-                <li><a href="<?php echo site_url('Home/register')?>">Register</a></li>
+                <li><a href="<?php echo site_url('Home/register') ?>">Register</a></li>
+                echo $
                 
                 <!--fix for scroll spy active menu element-->
                 <li style="display:none;"><a href="#header"></a></li>

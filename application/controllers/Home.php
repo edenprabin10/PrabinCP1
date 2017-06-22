@@ -39,7 +39,8 @@ class Home extends CI_Controller {
 	}
 
 	public function deletecustomer(){
-		$this->load->view('user');
+		//$this->load->view('user');
+		echo "DEleted";
 	}
 	
 	public function addcategory(){
@@ -50,4 +51,11 @@ class Home extends CI_Controller {
 		$this->load->view('selectcategory');
 	}
 
+	public function selectCustomer(){
+		$this->load->view('user');
+	}
+
+	public function updatecategory(){
+		$this->load->view('updatecategorylist');
+	}
 }

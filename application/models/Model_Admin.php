@@ -3,36 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	class Model_Admin extends CI_Model {
 
-
-		public function selectlistcategory(){
-	
-	$query = $this->db->get('category');
-	return $query->result();
-
-											}
-
-		public function deletecustomer(){
-			$id = $this->uri->segment(3);
-			$this->load->model('Model_Admin');
-			$data['message']=$this->Model_Admin->deletecustomer($id);
-			 $this->load->view('admindash');
-										}
-
-
-
-
-public function addItem($itemname,$itemprice,$itemdescription){
-								
-		$array=array(
-			"itemname"=>$itemname,
-			"itemprice"=>$itemprice,
-			"itemdescription"=>$itemdescription			
-		);
-		$this->db->insert("item",$array); //Active Records
-		return "Data saved";
-	}
-
-		public function addCategory($categoryname){						
+	public function addCategory($categoryname){						
 		$array=array(
 			"categoryname"=>$categoryname				
 		);
@@ -40,13 +11,42 @@ public function addItem($itemname,$itemprice,$itemdescription){
 		return "Data saved";
 									}
 
-	
 
 //select all category
 	public function listAofCategory(){
 		$query=$this->db->get('category');
 		return $query->result();
 	}
+
+	   public function selectCategory(){
+            $query = $this->db->get('category');
+             if($query->num_rows()>0){
+             return $query-> result();  
+        }
+}
+		
+
+
+//adding item
+public function addItem($itemname,$categoryID,$itemprice,$itemdescription){
+								
+		$array=array(
+			
+			"itemname"=>$itemname,
+			"categoryID"=>$categoryID,
+			"itemprice"=>$itemprice,
+			"itemdescription"=>$itemdescription	
+		);
+		$this->db->insert("item",$array); //Active Records
+		return "Data saved";
+	}
+public function finditem($id){
+	$this->db->where('itemid',$id);
+	$result=$this->db->get('item');
+	return $result->result();
+}
+		
+//item selectfuncing
 
 public function selectitem()
 		{
@@ -55,14 +55,39 @@ public function selectitem()
 	return $query->result();
 		}
 
-		//deleting Item
+			//deleting Item
 	public function removeItem($itemid){
 		$this->db->where("itemid",$itemid);
 		$result=$this->db->delete("item");
 		return "data deleted";
 	}
 
-	public function updateItem($itemID,$itemName,$itemPrice,$itemDescription){
+//select customer list
+		public function selectCustomer()
+		{
+	
+	$query = $this->db->get('customer');
+	return $query->result();
+		}
+
+//delete Customer
+		public function removecustomer($customerid){
+		$this->db->where("customerid",$customerid);
+		$result=$this->db->delete("customer");
+		return "data deleted";
+	}
+
+public function updateitem($itemid){
+		$result=$this->db->select('*')
+					->from('item')
+					->join('category','category.categoryid=item.categoryID')
+					->where('item.itemid',$itemid)
+					->get();
+		return $result->result();
+	}
+	
+
+	public function editItem($itemID,$itemName,$itemPrice,$itemDescription){
 	$arr=array("itemID"=>$itemID,
 				"itemName"=>$itemName,
 				"itemPrice"=>$itemPrice,

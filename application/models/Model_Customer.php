@@ -28,13 +28,15 @@ class Model_Customer extends CI_Model{
 		}
 	}
 
-public function addItem($itemname,$itemprice,$itemdescription){
+public function addItem($itemname,$itemprice,$itemdescription,$categoryID){
 								
 		$array=array(
-			"itemname"=>$itemname,
+			"itemname"=>$itemname,			
 			"itemprice"=>$itemprice,
-			"itemdescription"=>$itemdescription			
+			"itemdescription"=>$itemdescription,
+			"categoryID"=>$categoryID			
 		);
+		$this->load->model('Model_Admin');
 		$this->db->insert("item",$array); //Active Records
 		return "Data saved";
 	}

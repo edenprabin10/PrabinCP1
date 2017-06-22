@@ -21,7 +21,7 @@
 	<td> <?php echo $row->email; ?> </td>
 	<td> <?php echo $row->address; ?> </td>
 	<td> <?php echo $row->mobile_no; ?> </td>
-	<td> <a href="<?php echo base_url() . "index.php/admin/deletecustomer/" . $row->customerid; ?>">
+	<td> <a href="<?php echo base_url() . "index.php/Admin/deletecustomer/" . $row->customerid; ?>">
 	<button>Delete</button></a> </td>
 	
 </tr>
