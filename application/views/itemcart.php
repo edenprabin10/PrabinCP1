@@ -20,6 +20,7 @@ v<!DOCTYPE html>
     <td> Item Name </td>
 	<td> Item Price </td>
 	<td> Item Description </td>
+	<td> Category </td>
     </tr>
   </thead>
   <tbody>
@@ -31,15 +32,11 @@ v<!DOCTYPE html>
 	<td> <?php echo $row->itemname; ?> </td>
 	<td> <?php echo $row->itemprice; ?> </td>
 	<td> <?php echo $row->itemdescription; ?> </td>
+	<!-- <td><?php echo $row->categoryname; ?></td>> -->
 
-	<td> <a href="<?php echo base_url() . "index.php/Admin/deleteitem/" . $row->itemid; ?>">
+	<td> <a href="<?php echo base_url() . "index.php/Cart/itemid/" . $row->itemid; ?>">
 
-	<button>Delete</button></a> </td>
-
-
-	<td> <a href="<?php echo base_url() . "index.php/Admin/updateitem/" . $row->itemid; ?>">
-		<button>Edit</button></a> </td>
-	
+	<button>Add To Cart</button></a> </td>	
 </tr>
 <?php
 }

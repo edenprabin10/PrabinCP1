@@ -52,22 +52,27 @@ public function addItem($itemname,$itemprice,$itemdescription,$categoryID){
 	}
 
 
-public function updateCustomerProfile($customerID,$first_name,$last_name,$username,$password,$email,
-				$address,$mobile_no){
+public function editCustomer($firstname,$lastname,$username,$password,$email,
+							$address,$contactno,$customerid){
 		$array=array(
-			"first_name"=>$first_name,
-			"last_name"=>$last_name,
+			"customerid"=>$customerid,
+			"first_name"=>$firstname,
+			"last_name"=>$lastname,
 			"username"=>$username,
 			"password"=>$password,
 			"email"=>$email,
 			"address"=>$address,
-			"mobile_no"=>$mobile_no
+			"mobile_no"=>$contactno
 		);
 		$this->db->where("customerid",$customerid);
 		$this->db->update('customer',$array);
 		return "data updated";
 	}
 	
+
+
+
+//customer select garxha
 
 public function selectcustomer(){
 	
@@ -94,7 +99,15 @@ public function deleteitem($id){
 		}
 	
 
+public function selectcustomerbyid($customerid){
 
+	$this->db->where("customerid",$customerid);
+	$results=$this->db->get('customer');
+	return $results->result();
+}
+
+
+	
 	
 }
 ?>

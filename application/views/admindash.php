@@ -56,14 +56,9 @@
                         <p>Customer Profiles</p>
                     </a>
                 </li>
+               
                 <li>
-                    <a href="table.html" target="main-panel">
-                        <i class="ti-view-list-alt"></i>
-                        <p>Menu Items</p>
-                    </a>
-                </li>
-                <li>
-                <a href="<?php echo site_url('Home/additem') ?>" target="main-panel">
+                <a href="<?php echo site_url('admin/selectcategory') ?>" target="main-panel">
                         <i class="ti-view-list-alt"></i>
                         <p>Add Items</p>
                     </a>

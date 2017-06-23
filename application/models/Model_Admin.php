@@ -28,12 +28,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 //adding item
-public function addItem($itemname,$categoryID,$itemprice,$itemdescription){
+public function addItem($itemname,$categoryid,$itemprice,$itemdescription){
 								
 		$array=array(
 			
 			"itemname"=>$itemname,
-			"categoryID"=>$categoryID,
+			"categoryID"=>$categoryid,
 			"itemprice"=>$itemprice,
 			"itemdescription"=>$itemdescription	
 		);
@@ -87,13 +87,14 @@ public function updateitem($itemid){
 	}
 	
 
-	public function editItem($itemID,$itemName,$itemPrice,$itemDescription){
-	$arr=array("itemID"=>$itemID,
-				"itemName"=>$itemName,
-				"itemPrice"=>$itemPrice,
-				"itemDescription"=>$itemDescription,
+	public function editItem($itemid,$itemname,$categoryID,$itemprice,$itemdescription){
+
+	$arr=array("itemid"=>$itemid,
+				"itemName"=>$itemname,
+				"itemPrice"=>$itemprice,
+				"itemDescription"=>$itemdescription
 			);
-		$this->db->where("itemID",$itemID);
+		$this->db->where("itemid",$itemid);
 		$this->db->update('item',$arr);
 		return "data updated";
 	}

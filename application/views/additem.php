@@ -44,12 +44,12 @@
 		</div> -->
 
 
-                        <label for="category">Select categories:</label>                        
-                            <select size="1" name="categoryID" id="">
+                        <label for="category"></label>                        
+                            <select size="1" name="categoryid" id="">
                                 <option value="">Select category </option>
                                 <?php if(count($getCategory)):?>
                                     <?php foreach($getCategory as $category):?>
-                                     <option value=<?php echo $category->categoryid?>>
+                                     <option value="<?php echo $category->categoryid?>">
                                                    <?php echo $category->categoryname;?>  
                                      </option> 
                                  <?php endforeach;?>

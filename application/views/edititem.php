@@ -13,8 +13,8 @@
 
 ?>
 
-			<form action="<?php echo base_url();?>/admin/additem" method="post">
-
+			<form action="<?php echo base_url();?>/admin/edititem" method="post">
+<input type="hidden" name="itemid" value="<?php echo $value->itemid; ?>">
 					
 				<div class="form-input">
 			    <input type="text" name="itemname" placeholder="Enter Item Name" value="<?php echo $value->itemname; ?>">				
@@ -31,29 +31,8 @@
 				<div class="form-input">
 				</div>
 
-				<!-- <div class="styled-select">
-				<select name="categoryID">
-				<?php
-					foreach($records as $row){ 
-				?>
-					<option value="<?=$row->categoryID ?> "> 		
-						<?=$row->categoryname ?> 
 						
-					</option>
-				<?php 
-			}
-					?>
-			</select> 
-		</div> -->
-
-
-                        <label for="category">Select categories:</label>                        
-                            <select size="1" name="categoryid" id="">
-                                     <option value=<?php echo $value->categoryid?>>
-                                                   <?php echo $value->categoryname;?>  
-                                     </option> 
-                            </select>			
-			<button>	<input type="submit" name="submit" value="Add" class="btn-login"> </button>
+			<button>	<input type="submit" name="submit" value="Update" class="btn-login"> </button>
 				
 			</form>
 		<?php

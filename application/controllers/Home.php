@@ -58,4 +58,15 @@ class Home extends CI_Controller {
 	public function updatecategory(){
 		$this->load->view('updatecategorylist');
 	}
+
+	public function updatecustomerprofile(){
+		$this->load->view('editcustomer');
+	}
+
+	public function booking(){
+		$this->load->view('booking');
+	}
+	public function cart(){
+		$this->load->view("cart");
+	}
 }

@@ -22,13 +22,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		public function additem(){
 			
 			$itemname=$this->input->post('itemname');
-			$categoryID=$this->input->post('categoryID');
+			$categoryid=$this->input->post('categoryid');
 			$itemprice=$this->input->post('itemprice');
 			$itemdescription=$this->input->post('itemdescription');
 			$this->load->model('Model_Admin');
 			
 			$data['message']=$this->Model_Admin->addItem(
-							$itemname,$categoryID,$itemprice,$itemdescription);
+							$itemname,$categoryid,$itemprice,$itemdescription);
 							
 			 //$this->load->view('additem',$data);
 			 redirect('home/additem'); 
@@ -56,13 +56,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	}
 
 
-	
 
 				public function updateitem($itemid){
 		$this->load->model('Model_Admin');
 		$check['message']=$this->Model_Admin->updateitem($itemid);
 		$this->load->view('edititem',$check);
 	}
+	
+	public function edititem(){
+			$itemname=$this->input->post('itemname');
+			$itemid=$this->input->post('itemid');
+			$categoryID=$this->input->post('categoryid');
+			$itemprice=$this->input->post('itemprice');
+
+			$itemdescription=$this->input->post('itemdescription');
+			
+
+			$this->load->model('Model_Admin');
+			
+			$data['message']=$this->Model_Admin->edititem($itemid,
+							$itemname,$categoryID,$itemprice,$itemdescription);
+							
+			 //$this->load->view('additem',$data);
+			echo "successfull";
+		} 
+		
+
 	
 	public function finditem($id){
 
@@ -114,54 +133,14 @@ public function selectcustomer(){
         $this->load->view('additem',['getCategory'=>$selectCategory]);
        
     }
-		/*	public function listCategoryUpdate() {
-		$this->load->model('Model_Admin');
-		$data['records']=$this->Model_Admin->listAllCategory();
-		$this->load->view('UpdateCategoryList',$data);
-	}*/
-
-/*public function listCategoryUpdate() {
-		$this->load->model('Model_Admin');
-		$data['records']=$this->Model_Admin->listCategoryUpdate();
-		$this->load->view('updatecategory',$data);
-	}
-	
-	public function editcategory($categoryid){
-		$this->load->model('Model_Admin');
-		$category=$this->Model_Admin->findCategory($categoryID);
-		$this->load->view('updatecategory',['category'=>$categoryname]);
-	}
-	
-	public function updatecategory(){
-		$categoryid=$this->input->post('hiddenID');
-		$categoryname=$this->input->post('categoryname');
-		$this->load->model('Model_Admin');
-		$data['records']=$this->Model_Admin->updatecategory();
-		$check=$this->Model_Admin->updatecategory($categoryid,$categoryname);
-		if ($check){
-			echo "Done";
-		} else{
-			echo "Not done";
-		}
-	}
-*/
-	/*
-
-	
-	public function updateCategory($categoryID, $categoryName){
-	$arr=array("categoryID"=>$categoryID,
-		"categoryName"=>$categoryName);
-		$this->db->where("categoryID",$categoryID);
-		$this->db->update('category',$arr);
-		return "data updated";
-	}
+		
 	
 	// Delete Category
 	public function removeCategory($categoryID){
 		$this->db->where("categoryID",$categoryID);
 		$result=$this->db->delete("category");
 		return "data deleted";
-	}*/
+	}
 	
 
 	}	
