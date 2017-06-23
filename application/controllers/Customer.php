@@ -28,6 +28,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$result=$this->Model_Customer->logincheck($username,$password);
 			if ($result){
 				if ($result==1){
+					$this->session->set_userdata('customerid',$result);
+
 					return redirect('Home/admindash');
 				}else{
 					$this->load->library('session');
@@ -38,11 +40,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				}
 			}else{
 				echo ("password not match");
-			}
-				
-				
-			
-			
+			}				
+					
 	}
 	/*public function additem(){
 		

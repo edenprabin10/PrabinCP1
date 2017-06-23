@@ -42,7 +42,7 @@
 				</div>
 				
 				<button type="submit" name="submit" value="Sign Up" class="btn-login"> Sign Up </button>
-				<a href="#"> Forget Password ?</a> <br>
+				<a href="<?php echo site_url("home/login")?>"> Login?</a> <br>
 				
 			</form>
 		</div>

@@ -67,6 +67,12 @@
                     </a>
                 </li>
                     
+                    <li>
+                    <a href="<?php echo site_url("Cart/addtocart");?>">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Add Cart</p>
+                    </a>
+                </li>
                               
 				
             </ul>

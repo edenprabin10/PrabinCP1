@@ -34,9 +34,8 @@ v<!DOCTYPE html>
 	<td> <?php echo $row->itemdescription; ?> </td>
 	<!-- <td><?php echo $row->categoryname; ?></td>> -->
 
-	<td> <a href="<?php echo base_url() . "index.php/Cart/itemid/" . $row->itemid; ?>">
+	<td> <?php echo anchor("Cart/addtocart/{$row->itemid}",'Add to cart'); ?> </td>
 
-	<button>Add To Cart</button></a> </td>	
 </tr>
 <?php
 }

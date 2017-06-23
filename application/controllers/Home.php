@@ -10,7 +10,8 @@ class Home extends CI_Controller {
 	
 	public function register()
 	{
-		$this->load->view('register');
+		 $this->load->view('register');
+
 	}
 	
 	public function login()
@@ -67,6 +68,6 @@ class Home extends CI_Controller {
 		$this->load->view('booking');
 	}
 	public function cart(){
-		$this->load->view("cart");
+		$this->load->view("categoryitem");
 	}
 }
