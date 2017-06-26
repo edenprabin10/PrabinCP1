@@ -41,19 +41,18 @@
                 <a class="navbar-brand" href="#">
               <h2>CAFE CLUB</h2></a>
             </div><!-- navbar-header -->
+
         <div id="navbar" class="navbar-collapse collapse">
-            <div class="hidden-xs" id="logo"><a href="#header">
-                <img src="<?php echo base_url();?>assets/img/logo.png" alt="">
-            </a></div>
+            
 
             <ul class="nav navbar-nav navbar-left">
-
                 <li><a href="#reservation">Reservation</a></li>
-                <li><a href="#chefs">Our Chefs</a></li>
+                <li><a href="#chefs">Our Chefs</a></li>      
 
-                
-                <li><a href="#facts">Facts</a></li>
-                <li><a href="#food-menu">Food Menu</a></li>
+                <li><a href="#our-story">Facts</a></li>                
+             
+                <li><a href="#food-menu">Food Menu</a></li><li></li>>
+
 
 
                <a href="<?php echo site_url('Home/register')?> " style="color:white;font-size:1.1em;text-decoration:none;"> Register </a> 
@@ -72,8 +71,7 @@
         <div class="center text-center">
             <div class="banner">
                 <h1 class="">Cafe Club</h1>
-                <a href="<?php echo site_url('Home/register')?> "> adf </a>
-
+               
             </div>
         </div>
         <div class="bottom text-center">

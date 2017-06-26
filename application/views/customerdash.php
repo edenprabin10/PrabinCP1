@@ -68,7 +68,7 @@
                 </li>
                     
                     <li>
-                    <a href="<?php echo site_url("Cart/addtocart");?>">
+                    <a href="<?php echo site_url("Cart/selectitemcart");?>">
                         <i class="ti-view-list-alt"></i>
                         <p>Add Cart</p>
                     </a>
@@ -121,7 +121,23 @@
             </div>
         </nav>
 
-
+<ul class="nav nav-pills">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Profile</a></li>
+  
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      Dropdown <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Something else here</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Separated link</a></li>
+    </ul>
+  </li>
+</ul>
 
         <footer class="footer">
             <div class="container-fluid">

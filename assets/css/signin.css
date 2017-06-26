@@ -1,6 +1,6 @@
 body{
 	margin: 0 auto;
-	background-image: url("../img/cafe1.jpg");
+	background-image: url("../img/1.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 1280px; 
 }
@@ -39,3 +39,4 @@ input[type="text"], input[type="password"] {
 		margin-bottom: 20px;
 		background-color: #fff;
 		padding-left: 30px;	
+	}

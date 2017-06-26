@@ -37,9 +37,11 @@ v<!DOCTYPE html>
 	<td> <?php echo anchor("Cart/addtocart/{$row->itemid}",'Add to cart'); ?> </td>
 
 </tr>
+
+
 <?php
 }
 ?>	
-   
+  <a href="<?php echo site_url("home/customerdash");?>"> Back</a>
   </tbody>
 </table>

@@ -119,7 +119,22 @@ $customerid=3;
        
     }
 
-
+	public function booking(){
+		
+			$firstname=$this->input->post('firstname');
+			$lastname=$this->input->post('lastname');		
+			$phone=$this->input->post('phone');
+			$bookingdate=$this->input->post('bookingdate');
+			$bookingtime=$this->input->post('bookingtime');
+			$this->load->model('Model_Customer');
+			
+			$data['message']=$this->Model_Customer->booking
+							($firstname,$lastname,$phone,
+							$bookingdate,$bookingtime);
+							
+			 $this->load->view('booking');
+			echo "successfull";
+		} 
 	
 	
 }	

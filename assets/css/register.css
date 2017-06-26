@@ -1,72 +1,9 @@
-body{
-	margin: 0 auto;
-	background-image: url("../img/cafe.jpg");
-	background-repeat: no-repeat;
-	background-size: 100% 1080px; 
-}
 
-.container 
-{
-	width: 500px;
-	height: 520px;
-	text-align: center;
-	background-color: rgba(52, 73, 94,0.7) ;
-	border-radius: 4px;
-	margin: 0 auto;
-	margin-top: 150px;
-}
-
-.container img{
-	width: 120px;
-	height: 135px;
-	margin-top: -60px;
-	margin-bottom: -25px;
-}
-
-	input[type="text"], input[type="password"] {
-		height:25px;
-		width:300px;
-		font-size: 14px;
-		margin-bottom: 20px;
-		background-color: #fff;
-		padding-left: 30px;		
-	}
-	
-.btn-login	{
-	padding:15px 25px;
-	color: #fff;
-	border: none;
-	border-radius: 4px;
-	background-color: #2ECC71;
-}
-a{
-	color:#fff;
-}
-
-	/*  
-
-TABLE OF CONTENTS
-    01 - General and Typography
-    02 - Header
-    03 - Navigation
-    04 - Services
-    05 - Parallax
-    06 - Food menu
-    07 - Special offers
-    08 - Reservation
-    09 - Chefs
-    10 - Footer
-    11 - Responsive styles
-*/
-
-
-/* ==========================================================================
-    01. General and Typography 
-========================================================================== */
 body {
     font-family:'Kreon',serif;
     -webkit-font-smoothing:antialiased;
     -webkit-text-size-adjust:100%;
+    background-image:url(../img/night1.jpg);
 }
 img {
     max-height:100%;
@@ -180,36 +117,32 @@ section::before,section::after {
 .navbar-nav>li:nth-child(3) {
     margin-right: 110px;
 }
-
-
-/* ==========================================================================
-    03. Navigation 
-========================================================================== */
-#menu {
-    background:rgba(33,45,57,0.8);
-    margin-bottom:0;
+.container 
+{
+    width: 500px;
+    height: 520px;
+    text-align: center;
+    background-color: rgba(52, 73, 94,0.7) ;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 150px;
 }
-.navbar-brand h2 {
-    margin-top:0;
-    font-weight:bold;
-    color:white;
+input[type="text"], input[type="password"] {
+        height:25px;
+        width:300px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding-left: 30px;     
+    }
+    
+    .btn-login  {
+    padding:15px 25px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background-color: #2ECC71;
 }
-.navbar-brand {
-    padding-top:8px;
-    padding-bottom:0;
+a{
+    color:#fff;
 }
-.navbar-inverse .navbar-nav>li>a {
-    -webkit-transition:all 0.4s;
-    -moz-transition:all 0.4s;
-    -o-transition:all 0.4s;
-    transition:all 0.4s;
-    color:white;
-    font-weight:bold;
-}
-.navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>.active>a {
-    background:#ed0121;
-    color:white;
-    text-shadow:none;
-}
-	
-	

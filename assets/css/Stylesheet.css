@@ -39,6 +39,7 @@ body p
 
 #sidebar
 {
+    background-image: url(../img/coffee2.jpg);
     float: right;
     width: 250px;
     height: 400px;

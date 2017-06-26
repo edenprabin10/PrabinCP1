@@ -1,8 +1,7 @@
 <?php
 
 class Model_Customer extends CI_Model{
-	public function Register($firstname,$lastname,$username,$password,$email,
-							$address,$contactno){
+	public function Register($firstname,$lastname,$username,$password,$email,$address,$contactno){
 								
 		$array=array(
 			"first_name"=>$firstname,
@@ -52,8 +51,7 @@ public function addItem($itemname,$itemprice,$itemdescription,$categoryID){
 	}
 
 
-public function editCustomer($firstname,$lastname,$username,$password,$email,
-							$address,$contactno,$customerid){
+public function editCustomer($firstname,$lastname,$username,$password,$email,$address,$contactno,$customerid){
 		$array=array(
 			"customerid"=>$customerid,
 			"first_name"=>$firstname,
@@ -107,6 +105,19 @@ public function selectcustomerbyid($customerid){
 }
 
 
+public function booking($firstname,$lastname,$phone,$bookingdate,
+							$bookingtime){
+								
+		$array=array(
+			"firstname"=>$firstname,
+			"lastname"=>$lastname,			
+			"phone"=>$phone,
+			"bookingdate"=>$bookingdate,
+			"bookingtime"=>$bookingtime
+		);
+		$this->db->insert("booking",$array); //Active Records
+		return "Data saved";
+	}
 	
 	
 }

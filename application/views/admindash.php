@@ -64,6 +64,19 @@
                     </a>
                   </li>        
                 
+                 <li>
+                <a href="<?php echo site_url('admin/addCategory') ?>" target="main-panel">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Add Category</p>
+                    </a>
+                  </li>
+                  <li>
+                <a href="<?php echo site_url('admin/addCategory') ?>" target="main-panel">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Booking</p>
+                    </a>
+                  </li>
+
 				
             </ul>
     	</div>
