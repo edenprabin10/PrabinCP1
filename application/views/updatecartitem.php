@@ -19,10 +19,9 @@
     <tr>
     <td> Item Name </td>
 	<td> Item Price </td>
-	<td> Item Description </td>
-	<td> Category </td>
+	<td> Item Quantity </td>
+	<td> Item Date </td>
 	<td> Action </td>
-
     </tr>
   </thead>
   <tbody>
@@ -33,17 +32,19 @@
 		?>
 	<td> <?php echo $row->itemname; ?> </td>
 	<td> <?php echo $row->itemprice; ?> </td>
-	<td> <?php echo $row->itemdescription; ?> </td>
-	<td><?php echo $row->categoryname; ?></td>> 
+	<td> <?php echo $row->quantity; ?> </td>
+	<td> <?php echo $row->date; ?> </td>
+	
 
-	<td> <?php echo anchor("Cart/addtocart/{$row->itemid}",'Add to cart'); ?> </td>
+	
 
+	<td> <a href="<?php echo base_url() . "index.php/Cart/updateitem/" . $row->itemid; ?>">
+		
+	
 </tr>
-
-
 <?php
 }
 ?>	
-  <a href="<?php echo site_url("home/customerdash");?>"> Back</a>
+   
   </tbody>
 </table>

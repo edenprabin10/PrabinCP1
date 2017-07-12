@@ -17,10 +17,12 @@
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
+    <td> Customer ID </td>	
     <td> Item Name </td>
 	<td> Item Price </td>
-	<td> Item Description </td>
-	<td> Category </td>
+	<td>Quantity </td>
+	<td> Date </td>
+	<td> Total Amount </td>
 	<td> Action </td>
 
     </tr>
@@ -29,14 +31,27 @@
     
     <tr class="info">
       <?php
-	foreach ($message as $row){
+      $totalamount=0;
+	foreach ($bill as $row){
+		
+		$price=$row['itemprice'];
+		$quantity=$row['quantity'];
+		$total=$price * $quantity;
+		$totalamount+=$total;
 		?>
-	<td> <?php echo $row->itemname; ?> </td>
-	<td> <?php echo $row->itemprice; ?> </td>
-	<td> <?php echo $row->itemdescription; ?> </td>
-	<td><?php echo $row->categoryname; ?></td>> 
 
-	<td> <?php echo anchor("Cart/addtocart/{$row->itemid}",'Add to cart'); ?> </td>
+	<td> <?php echo $row['customerid'];  ?> </td>	
+	<td> <?php echo $row['itemname']; ?> </td>
+	<td> <?php echo $row['itemprice']; ?> </td>
+	<td> <?php echo $row['quantity']; ?></td>
+	<td> <?php echo $row['date']; ?> </td>
+	<td> <?php 
+		
+		echo $total; ?>
+	</td>
+	
+
+	
 
 </tr>
 
@@ -44,6 +59,9 @@
 <?php
 }
 ?>	
+
+
+Grand Total :<td><?php echo $totalamount; ?></td>
   <a href="<?php echo site_url("home/customerdash");?>"> Back</a>
   </tbody>
 </table>

@@ -99,13 +99,43 @@ public function updateitem($itemid){
 		return "data updated";
 	}
 
+//selecting booking
 
-
-/*public function deleteitem($itemid){
-			$this->db->where('itemid',$id);
-			$this->db->delete('item');
+	public function selectbooking()
+		{
+	
+	$query = $this->db->get('booking');
+	return $query->result();
 		}
-*/
+
+			public function removebooking($bookingid){
+		$this->db->where("bookingid",$bookingid);
+		$result=$this->db->delete("booking");
+		return "data deleted";
+	}
+
+
+	public function customerorder(){
+		$query=$this->db->get('cart');
+		return $query->result();
+
+		echo" hello";
+	}
+
+	public function billcustomer($sessionData){
+
+
+		$this->db->select('*','sum(order.itemprice)');
+		$this->db->from('order');
+		//$this->db->join('user','user.user_id=order.cart_session','inner');
+		$this->db->join('customer','customer.customerid=order.customerid','inner');
+		$this->db->where('customerid',$sessionData);
+		$res=$this->db->get();	
+	
+		return $res->result_array();
+	}
+
+	
 	}
 
 	?>

@@ -71,9 +71,15 @@
                     </a>
                   </li>
                   <li>
-                <a href="<?php echo site_url('admin/addCategory') ?>" target="main-panel">
+                <a href="<?php echo site_url('admin/selectbooking') ?>" target="main-panel">
                         <i class="ti-view-list-alt"></i>
                         <p>Booking</p>
+                    </a>
+                  </li>
+                    <li>
+                <a href="<?php echo site_url('admin/customerorder') ?>" target="main-panel">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Customer Order</p>
                     </a>
                   </li>
 
@@ -110,7 +116,7 @@
 									<b class="caret"></b>
                               </a>
                               <ul class="dropdown-menu">
-                                <li><a href="#">Logout</a></li>
+                                <li><a href="<?php echo site_url("admin/logout");?>">Logout</a></li>
                                 <li><a href="#">Edit Profile</a></li>
                                 
                               </ul>

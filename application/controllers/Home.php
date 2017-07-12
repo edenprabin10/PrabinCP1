@@ -70,4 +70,8 @@ class Home extends CI_Controller {
 	public function cart(){
 		$this->load->view("categoryitem");
 	}
+
+	public function billcustomer(){
+		$this->load->view("customerbill");
+	}
 }

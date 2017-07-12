@@ -35,8 +35,8 @@
 
             <ul class="nav navbar-nav navbar-left">
             	<li><a href="<?php echo site_url('Home/index')?> ">Home</a></li>      
-                <li><a href="#reservation">Reservation</a></li>
-                <li><a href="#chefs">Our Chefs</a></li>         
+                <li><a href="#reservation">About</a></li>
+                <li><a href="#chefs">Services</a></li>         
                 <li><a href="#food-menu">Food Menu</a></li><li></li>>
 
 
@@ -51,7 +51,7 @@
         </div><!--/.navbar-collapse -->
         </div><!-- container -->
     </div>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/signin.css"> </link>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/signin.css"> </link> 
 	
 	</head>
 	<body>

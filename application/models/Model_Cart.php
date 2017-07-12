@@ -17,7 +17,8 @@ public function selectitemcart()
 		
 		$array=array(
 			"cartsession"=>$sessionData,
-			"itemid"=>$itemid
+			"itemid"=>$itemid,
+			"quantity"=>1
 			//"item_name"=>$item_name
 		);
 		 $this->db->set('date', 'NOW()', FALSE);
@@ -27,13 +28,13 @@ public function selectitemcart()
 
 //name and price na aako le yesto garya
 public function getnameprice($itemid){
-		echo $itemid;
+		
 		$this->db->where("itemid", $itemid);
 			$result=$this->db->get("item");
 			$row=$result->result_array();
 			$itemprice= ($row[0]['itemprice']);
 						$itemname= ($row[0]['itemname']);
-			echo $itemprice;
+			
 			$array=array(
 			"itemid"=>$itemid,
 			"itemprice"=>$itemprice,
@@ -41,7 +42,47 @@ public function getnameprice($itemid){
 		$this->db->where("itemid",$itemid);
 		$this->db->update('cart',$array);
 	}
+
+
+public function viewCartDetails($sessionData){
+		$this->db->where("cartsession",$sessionData);
+		//$this->db->order_by("date");
+		$result=$this->db->get("cart");
+		return $result->result();
+	}
+
+	public function removecartitem($cartid){
+		$this->db->where("cartid",$cartid);
+		$result=$this->db->delete("cart");
+		return "data deleted";
+	}
+
+
+public function updateitemcart($cartid,$quantity){
+
+		$array=array(
+			"cartid"=>$cartid,
+			"quantity"=> $quantity
+			
+		);
+		 $this->db->where('cartid',$cartid);
+		$this->db->update("cart",$array); //Active Records
+		return "Data saved";
+	}
+
+	public function getCartProduct($sessionData){
+	
+		$query = $this->db->select('*')
+						->from('item')
+						->join('category','item.categoryid=category.categoryid')
+						->get();
+        return $query->result();
+	}
+
+
+
 }
+
 
 
 	?>

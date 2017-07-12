@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Item</title>
+	<title>Booking List</title>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js');?>"> </script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.10.2.js');?>"> </script>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css');?>">
@@ -14,36 +14,43 @@
 
 <div class="container">
 
+
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
-    <td> Item Name </td>
-	<td> Item Price </td>
-	<td> Item Description </td>
-	<td> Category </td>
-	<td> Action </td>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Phone</th>
+      <th>Booking Date</th>
+      <th>Booking Time</th>
+      <th>Customer ID </th>
+      <th>Action</th>
 
     </tr>
   </thead>
   <tbody>
     
-    <tr class="info">
-      <?php
+    <tr>
+    	<?php
 	foreach ($message as $row){
 		?>
-	<td> <?php echo $row->itemname; ?> </td>
-	<td> <?php echo $row->itemprice; ?> </td>
-	<td> <?php echo $row->itemdescription; ?> </td>
-	<td><?php echo $row->categoryname; ?></td>> 
-
-	<td> <?php echo anchor("Cart/addtocart/{$row->itemid}",'Add to cart'); ?> </td>
-
+	<td> <?php echo $row->firstname; ?> </td>
+	<td> <?php echo $row->lastname; ?> </td>
+	<td> <?php echo $row->phone; ?> </td>
+	<td> <?php echo $row->bookingdate; ?> </td>
+	<td> <?php echo $row->bookingtime; ?> </td>
+	<td> <a href="<?php echo base_url() . "index.php/Admin/deletebooking/" . $row->bookingid; ?>">
+<button>Delete</button></a> </td> 
+	
 </tr>
-
 
 <?php
 }
-?>	
-  <a href="<?php echo site_url("home/customerdash");?>"> Back</a>
+?>	    
+   
   </tbody>
+</table> 
+</div>
+</tbody>
 </table>
+

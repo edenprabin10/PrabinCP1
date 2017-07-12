@@ -1,5 +1,6 @@
 <table>
 	<thead>
+
 		<tr>
 			<td> First Name </td>
 			<td> Last Name </td>
@@ -7,6 +8,7 @@
 			<td> Email </td>
 			<td> Address </td>
 			<td> Mobile No </td>
+			<td> Customer ID</td>
 			<td> Delete </td>
 		</tr>
 	</thead>
@@ -25,6 +27,10 @@
 	<button>Delete</button></a> </td>
 	
 </tr>
+ <a href="<?php echo site_url("admin/admindash");?>"> Back</a>
+ </tbody>
+</table>
+<a href="<?php echo site_url("admin/admindash");?>"> Back</a>
 <?php
 }
 ?>	

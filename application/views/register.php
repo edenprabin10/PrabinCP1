@@ -35,8 +35,9 @@
 
             <ul class="nav navbar-nav navbar-left">
             	<li><a href="<?php echo site_url('Home/dashboard1')?> ">Home</a></li>      
-                <li><a href="#reservation">Reservation</a></li>
-                <li><a href="#chefs">Our Chefs</a></li>         
+                <li><a href="#reservation">About Us</a></li>
+                <li><a href="#reservation">Services</a></li>
+                       
                 <li><a href="#food-menu">Food Menu</a></li><li></li>>
 
 
@@ -105,7 +106,8 @@
 				</div>
 				
 				<button type="submit" name="submit" value="Sign Up" class="btn-login"> Sign Up </button>
-				<a href="<?php echo site_url("home/login")?>"> Login?</a> <br>
+				<a href="#"> Forget YOur Password</a> </br>
+				<a href="<?php echo site_url("home/login")?>"> Already Member</a> <br>
 				
 			</form>
 		</div>

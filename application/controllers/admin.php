@@ -142,7 +142,48 @@ public function selectcustomer(){
 		return "data deleted";
 	}
 	
+//select Booking
+public function selectbooking(){
+			$this->load->model("Model_Admin");
+			$data['message']=$this->Model_Admin->selectbooking();
+			$this->load->view('bookinguser',$data);// 
+		}
+
+	public function deletebooking($bookingid){
+		$this->load->model('Model_Admin');
+		$check=$this->Model_Admin->removebooking($bookingid);
+		if ($check){
+			echo "Done";
+		} else{
+			echo "Not done";
+		}
+	}
+
+	public function logout(){
+		$this->session->sess_destroy();
+        redirect('home/login');
+	}
+
+public function billcustomer(){
+
+        $sessionData=$this->session->userdata('customerid');
+        if($sessionData!=''){
+            $this->load->Model('Model_Admin');
+            
+            $data['bill']=$this->Model_Admin->billcustomer
+                            ($sessionData);
+      
+        $this->load->view('customerbill',$data);
+        } 
+       }
+
+/*public function customerorder(){
+	$this->load->Model("Model_Admin");
+	$data['message']=$this->Model_Admin->customerorder();
+	$this->load->view('customerorderlist',$data);*/
+
 
 	}	
 
-		?>
+
+	

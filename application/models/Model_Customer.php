@@ -51,9 +51,9 @@ public function addItem($itemname,$itemprice,$itemdescription,$categoryID){
 	}
 
 
-public function editCustomer($firstname,$lastname,$username,$password,$email,$address,$contactno,$customerid){
+public function editcustomer($firstname,$lastname,$username,$password,$email,$address,$contactno,$customerid){
 		$array=array(
-			"customerid"=>$customerid,
+		
 			"first_name"=>$firstname,
 			"last_name"=>$lastname,
 			"username"=>$username,
@@ -97,9 +97,9 @@ public function deleteitem($id){
 		}
 	
 
-public function selectcustomerbyid($customerid){
+public function selectcustomerbyid($sessionData){
 
-	$this->db->where("customerid",$customerid);
+	$this->db->where("customerid",$sessionData);
 	$results=$this->db->get('customer');
 	return $results->result();
 }
@@ -107,19 +107,44 @@ public function selectcustomerbyid($customerid){
 
 public function booking($firstname,$lastname,$phone,$bookingdate,
 							$bookingtime){
-								
-		$array=array(
+		$sessionData=$this->session->userdata('customerid');		
+		    $array=array(
+
 			"firstname"=>$firstname,
 			"lastname"=>$lastname,			
 			"phone"=>$phone,
 			"bookingdate"=>$bookingdate,
-			"bookingtime"=>$bookingtime
+			"bookingtime"=>$bookingtime,
+			"customerid"=>$sessionData
 		);
 		$this->db->insert("booking",$array); //Active Records
 		return "Data saved";
 	}
 	
+	public function selectbooking()
+		{
 	
+	$query = $this->db->get('booking');
+	return $query->result();
+		}
+
+
+
+		public function billcustomer($sessionData){
+
+
+		//$this->db->select('*','sum(order.itemprice)');
+		$this->db->from('order');
+		//$this->db->join('user','user.user_id=order.cart_session','inner');
+		$this->db->join('customer','customer.customerid=order.customerid','inner');
+		$this->db->where('customer.customerid',$sessionData);
+		$res=$this->db->get();	
+	
+		return $res->result_array();
+	}
+
+	
+
 }
 ?>
 

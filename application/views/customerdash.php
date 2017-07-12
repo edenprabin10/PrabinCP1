@@ -55,17 +55,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="<?php echo site_url("Customer/selectforedit");?>">
                         <i class="ti-user"></i>
                         <p>User Profiles</p>
                     </a>
                 </li>
-                <li>
-                    <a href="table.html">
-                        <i class="ti-view-list-alt"></i>
-                        <p>Menu Category</p>
-                    </a>
-                </li>
+               
                     
                     <li>
                     <a href="<?php echo site_url("Cart/selectitemcart");?>">
@@ -74,7 +69,27 @@
                     </a>
                 </li>
                               
-				
+				<li>
+                    <a href="<?php echo site_url("home/booking");?>"> 
+                        <i class="ti-view-list-alt"></i>
+                        <p>Your Booking</p>
+                    </a>
+                </li>
+                        
+                        <li>
+                    <a href="<?php echo site_url("Cart/viewCartDetails");?>"> 
+                        <i class="ti-view-list-alt"></i>
+                        <p>Your Cart List</p>
+                    </a>
+                </li>
+
+                   <li>
+                    <a href="<?php echo site_url("Customer/billcustomer");?>"> 
+                        <i class="ti-view-list-alt"></i>
+                        <p>Yor Bill</p>
+                    </a>
+                </li>
+
             </ul>
     	</div>
     </div>
@@ -107,11 +122,9 @@
 									<b class="caret"></b>
                               </a>
                               <ul class="dropdown-menu">
-                                <li><a href="#">Logout</a></li>
-                                <li><a href="#">Edit Profile</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
+                                <li><a href="<?php echo site_url("Customer/logout");?>">Logout</a></li>
+                               
+                                
                               </ul>
                         </li>
 						
@@ -121,32 +134,16 @@
             </div>
         </nav>
 
-<ul class="nav nav-pills">
-  <li class="active"><a href="#">Home</a></li>
-  <li><a href="#">Profile</a></li>
-  
-  <li class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-      Dropdown <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-      <li><a href="#">Action</a></li>
-      <li><a href="#">Another action</a></li>
-      <li><a href="#">Something else here</a></li>
-      <li class="divider"></li>
-      <li><a href="#">Separated link</a></li>
-    </ul>
-  </li>
-</ul>
+
 
         <footer class="footer">
             <div class="container-fluid">
                 <nav class="pull-left">
                
                 </nav>
-                <div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Prabin Shakya</a>
-                </div>
+               <!--  <div class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="https://www.facebook.com/prabin.c.shakya">Prabin Shakya</a>
+                </div> -->
             </div>
         </footer>
 
@@ -184,8 +181,8 @@
         	demo.initChartist();
 
         	$.notify({
-            	icon: 'ti-gift',
-            	message: "Welcome Back"
+            	
+            	message: "Welcome "
 
             },{
                 type: 'success',

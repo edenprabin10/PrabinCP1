@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Item</title>
+	<title>View Order</title>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js');?>"> </script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-1.10.2.js');?>"> </script>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css');?>">
@@ -17,11 +17,13 @@
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
-    <td> Item Name </td>
+    <td> Customer ID </td>
+	<td> Item Name </td>
+	<td> Quantity </td>
 	<td> Item Price </td>
-	<td> Item Description </td>
-	<td> Category </td>
-	<td> Action </td>
+	<td>Total Amount </td>
+
+	
 
     </tr>
   </thead>
@@ -31,14 +33,12 @@
       <?php
 	foreach ($message as $row){
 		?>
+	<td> <?php echo $row->cartsession; ?> </td>
 	<td> <?php echo $row->itemname; ?> </td>
 	<td> <?php echo $row->itemprice; ?> </td>
-	<td> <?php echo $row->itemdescription; ?> </td>
-	<td><?php echo $row->categoryname; ?></td>> 
+	<td> <?php echo $row->quantity; ?> </td>
 
-	<td> <?php echo anchor("Cart/addtocart/{$row->itemid}",'Add to cart'); ?> </td>
-
-</tr>
+	</tr>
 
 
 <?php

@@ -11,6 +11,7 @@
 </head>
 
 <body>
+	
 
 <div class="container">
 
@@ -19,31 +20,52 @@
     <tr>
     <td> Item Name </td>
 	<td> Item Price </td>
-	<td> Item Description </td>
-	<td> Category </td>
+	<td> Item Quantity </td>
+	<td> Item Date </td>
 	<td> Action </td>
-
     </tr>
   </thead>
   <tbody>
     
     <tr class="info">
+    	
       <?php
-	foreach ($message as $row){
+	foreach ($message as $row){ 
+	
 		?>
+	
+
+
+	<form method="post" action="<?php echo base_url();?>/index.php/cart/updateitemcart">
+	 <input type="hidden" name="cartid" value="<?php echo $row->cartid; ?>">
+	
 	<td> <?php echo $row->itemname; ?> </td>
 	<td> <?php echo $row->itemprice; ?> </td>
-	<td> <?php echo $row->itemdescription; ?> </td>
-	<td><?php echo $row->categoryname; ?></td>> 
+	<td> <input type="text" name="quantity" value="<?php echo $row->quantity;?>" > </td>
+	
+	<td> <?php echo $row->date; ?> </td>
+	
 
-	<td> <?php echo anchor("Cart/addtocart/{$row->itemid}",'Add to cart'); ?> </td>
+	<td>
+<?php echo anchor("index.php/cart/deletecartitem/{$row->cartid}",'Delete' );?>
+	 </td>
 
+
+<td> 
+<?php echo anchor("index.php/cart/updates/{$row->cartid}",'Update' );?> </td>
+
+	
+	
 </tr>
-
-
 <?php
 }
 ?>	
-  <a href="<?php echo site_url("home/customerdash");?>"> Back</a>
+<button type="button" class="btn btn-success">Confirm</button>
+<button type="back" class="btn btn-default" value="<?php echo site_url("home/customerdash");?>">Back</button>
+
+   </form>
   </tbody>
+
 </table>
+</body>
+</html>

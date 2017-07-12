@@ -46,10 +46,10 @@
             
 
             <ul class="nav navbar-nav navbar-left">
-                <li><a href="#reservation">Reservation</a></li>
-                <li><a href="#chefs">Our Chefs</a></li>      
+                <li><a href="#reservation">Home</a></li>
+                <li><a href="#chefs">About Us</a></li>      
 
-                <li><a href="#our-story">Facts</a></li>                
+                <li><a href="#our-story">Services</a></li>                
              
                 <li><a href="#food-menu">Food Menu</a></li><li></li>>
 

@@ -50,8 +50,10 @@
     
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="back" class="btn btn-default" value="<?php echo site_url("home/customerdash");?>">Back</button>
         <button type="submit" class="btn btn-primary">Submit</button>
+
+
       </div>
     </div>
   </div>
