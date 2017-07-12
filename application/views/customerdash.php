@@ -37,11 +37,6 @@
 <div class="wrapper">
     <div class="sidebar" data-background-color="white" data-active-color="danger">
 
-    <!--
-		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
-		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
-	-->
-
     	<div class="sidebar-wrapper">
             <div class="logo">
                 
@@ -57,7 +52,7 @@
                 <li>
                     <a href="<?php echo site_url("Customer/selectforedit");?>">
                         <i class="ti-user"></i>
-                        <p>User Profiles</p>
+                        <p>Update Profiles</p>
                     </a>
                 </li>
                
@@ -65,28 +60,36 @@
                     <li>
                     <a href="<?php echo site_url("Cart/selectitemcart");?>">
                         <i class="ti-view-list-alt"></i>
-                        <p>Add Cart</p>
+                        <p>Menu</p>
                     </a>
                 </li>
                               
 				<li>
                     <a href="<?php echo site_url("home/booking");?>"> 
                         <i class="ti-view-list-alt"></i>
-                        <p>Your Booking</p>
+                        <p>Booking</p>
                     </a>
                 </li>
                         
                         <li>
                     <a href="<?php echo site_url("Cart/viewCartDetails");?>"> 
                         <i class="ti-view-list-alt"></i>
-                        <p>Your Cart List</p>
+                        <p> Your Menu List</p>
                     </a>
                 </li>
 
                    <li>
                     <a href="<?php echo site_url("Customer/billcustomer");?>"> 
                         <i class="ti-view-list-alt"></i>
-                        <p>Yor Bill</p>
+                        <p>Your Bill</p>
+                    </a>
+                </li>
+
+                <li>
+
+                    <a href="<?php echo base_url();?>assets/userguide.pdf"> 
+                        <i class="ti-view-list-alt"></i>
+                        <p>User Guide</p>
                     </a>
                 </li>
 
@@ -141,9 +144,7 @@
                 <nav class="pull-left">
                
                 </nav>
-               <!--  <div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="https://www.facebook.com/prabin.c.shakya">Prabin Shakya</a>
-                </div> -->
+               
             </div>
         </footer>
 

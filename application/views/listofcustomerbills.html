@@ -41,7 +41,7 @@
 	
 	<td> <?php echo $row->itemname; ?> </td>
 	<td> <?php echo $row->itemprice; ?> </td>
-	<td> <label > <?php echo $row->quantity;?> </td>
+	<td> <input type="text" name="quantity" value="<?php echo $row->quantity;?>" > </td>
 	
 	<td> <?php echo $row->date; ?> </td>
 	
@@ -60,8 +60,9 @@
 <?php
 }
 ?>	
-
-<button><a href="<?php echo site_url("home/customerdash");?>"> Confirm</a></button>
+<button type="button" class="btn btn-success"  value="<?php echo site_url("home/customerdash");?>" >Confirm</button>
+<button type="back" class="btn btn-default" value="<?php echo site_url("home/customerdash");?>">Back</button>
+<a href="<?php echo site_url("home/customerdash");?>"> Back</a>
 
    </form>
   </tbody>

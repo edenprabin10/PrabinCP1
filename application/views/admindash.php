@@ -53,7 +53,7 @@
                 <li>
                     <a href="<?php echo site_url('admin/selectcustomer') ?>" target="main-panel">
                         <i class="ti-user"></i>
-                        <p>Customer Profiles</p>
+                        <p>Customer Profiles List</p>
                     </a>
                 </li>
                
@@ -102,12 +102,7 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="ti-panel"></i>
-								<p>Stats</p>
-                            </a>
-                        </li>
+                     
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="ti-settings"></i>
@@ -116,24 +111,10 @@
 									<b class="caret"></b>
                               </a>
                               <ul class="dropdown-menu">
-                                <li><a href="<?php echo site_url("admin/logout");?>">Logout</a></li>
-                                <li><a href="#">Edit Profile</a></li>
-                                
+                                <li><a href="<?php echo site_url("admin/logout");?>">Logout</a></li>                       
                               </ul>
                         </li>
-						<!-- <li>
-                            <a href="#">
-								<i class="ti-settings"></i>
-								<p>Settings</p>
-								<ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                              </ul>
-                            </a>
-                        </li> -->
+						
                     </ul>
 
                 </div>
@@ -188,7 +169,7 @@
 
         	$.notify({
             	icon: 'ti-gift',
-            	message: "Welcome Back <b>Admin </b>"
+            	message: "Welcome Back <b>Prabin </b>"
 
             },{
                 type: 'success',

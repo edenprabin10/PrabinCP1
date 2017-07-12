@@ -44,19 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			}				
 					
 	}
-	/*public function additem(){
-		
-			$itemname=$this->input->post('itemname');
-			$itemprice=$this->input->post('itemprice');
-			$itemdescription=$this->input->post('itemdescription');
-			$this->load->model('Model_Customer');
-			
-			$data['message']=$this->Model_Customer->addItem
-							($itemname,$itemprice,$itemdescription);
-							
-			 //$this->load->view('login');
-			echo "successfull";
-		} */
+
 		
 		public function selectcustomer(){
 			$this->load->model("Model_Customer");
@@ -64,13 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$this->load->view('user',$data);// 
 							
 		}
-		/*public function deletecustomer(){
-			$id = $this->uri->segment(3);
-			$this->load->model('Model_Customer');
-			$data['message']=$this->Model_Customer->deletecustomer($id);
-			 $this->load->view('admindash');
-		}
-		*/
+		
 		public function updatecustomer($customerid){
 		$this->load->model('Model_Customer');
 		$check['message']=$this->Model_Customer->updatecustomer($customerid);
@@ -159,7 +141,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         if($sessionData!=''){
             $this->load->model('Model_Customer');
             
-            $data['bill']=$this->Model_Customer->billcustomer                            ($sessionData);
+            $data['bill']=$this->Model_Customer->billcustomer($sessionData);
           
       
         $this->load->view('customerbill',$data);

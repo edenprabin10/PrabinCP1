@@ -63,7 +63,7 @@ public function selectitem()
 	}
 
 //select customer list
-		public function selectCustomer()
+		public function selectcustomer()
 		{
 	
 	$query = $this->db->get('customer');
@@ -86,7 +86,7 @@ public function updateitem($itemid){
 		return $result->result();
 	}
 	
-
+//editing item
 	public function editItem($itemid,$itemname,$categoryID,$itemprice,$itemdescription){
 
 	$arr=array("itemid"=>$itemid,
@@ -116,18 +116,16 @@ public function updateitem($itemid){
 
 
 	public function customerorder(){
-		$query=$this->db->get('cart');
+		$query=$this->db->get('order');
 		return $query->result();
 
-		echo" hello";
-	}
+			}
 
 	public function billcustomer($sessionData){
 
 
 		$this->db->select('*','sum(order.itemprice)');
 		$this->db->from('order');
-		//$this->db->join('user','user.user_id=order.cart_session','inner');
 		$this->db->join('customer','customer.customerid=order.customerid','inner');
 		$this->db->where('customerid',$sessionData);
 		$res=$this->db->get();	

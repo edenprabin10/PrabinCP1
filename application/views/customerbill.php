@@ -20,10 +20,10 @@
     <td> Customer ID </td>	
     <td> Item Name </td>
 	<td> Item Price </td>
-	<td>Quantity </td>
+	<td>  Quantity </td>
 	<td> Date </td>
 	<td> Total Amount </td>
-	<td> Action </td>
+	
 
     </tr>
   </thead>
@@ -33,7 +33,7 @@
       <?php
       $totalamount=0;
 	foreach ($bill as $row){
-		
+		/*array bata data select gareko*/
 		$price=$row['itemprice'];
 		$quantity=$row['quantity'];
 		$total=$price * $quantity;
@@ -51,8 +51,6 @@
 	</td>
 	
 
-	
-
 </tr>
 
 
@@ -61,7 +59,7 @@
 ?>	
 
 
-Grand Total :<td><?php echo $totalamount; ?></td>
+<td> Grand Total : <?php echo $totalamount; ?></td>
   <a href="<?php echo site_url("home/customerdash");?>"> Back</a>
   </tbody>
 </table>

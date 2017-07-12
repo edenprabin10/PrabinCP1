@@ -14,6 +14,7 @@
 
 <div class="container">
 
+<h3> Customer Booking </h3>
 
 <table class="table table-striped table-hover ">
   <thead>
@@ -39,15 +40,19 @@
 	<td> <?php echo $row->phone; ?> </td>
 	<td> <?php echo $row->bookingdate; ?> </td>
 	<td> <?php echo $row->bookingtime; ?> </td>
+	<td> <?php echo $row->customerid; ?> </td>
+	
 	<td> <a href="<?php echo base_url() . "index.php/Admin/deletebooking/" . $row->bookingid; ?>">
 <button>Delete</button></a> </td> 
+
 	
 </tr>
+
 
 <?php
 }
 ?>	    
-   
+    <a href="<?php echo site_url("home/admindash");?>"> Back</a>
   </tbody>
 </table> 
 </div>

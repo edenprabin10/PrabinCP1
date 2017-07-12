@@ -14,15 +14,16 @@
 
 <div class="container">
 
+
 <table class="table table-striped table-hover ">
+	<h4> Customer Order List </h4>
   <thead>
     <tr>
     <td> Customer ID </td>
 	<td> Item Name </td>
 	<td> Quantity </td>
 	<td> Item Price </td>
-	<td>Total Amount </td>
-
+	
 	
 
     </tr>
@@ -33,7 +34,7 @@
       <?php
 	foreach ($message as $row){
 		?>
-	<td> <?php echo $row->cartsession; ?> </td>
+	<td> <?php echo $row->customerid; ?> </td>
 	<td> <?php echo $row->itemname; ?> </td>
 	<td> <?php echo $row->itemprice; ?> </td>
 	<td> <?php echo $row->quantity; ?> </td>
@@ -44,6 +45,10 @@
 <?php
 }
 ?>	
-  <a href="<?php echo site_url("home/customerdash");?>"> Back</a>
+  
   </tbody>
 </table>
+<button><a href="<?php echo site_url("home/admindash");?>"> Back</a> </button>
+</div>
+</body>
+</html>

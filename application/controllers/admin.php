@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		 //select Customer
 public function selectcustomer(){
 			$this->load->model("Model_Admin");
-			$data['message']=$this->Model_Admin->selectCustomer();
+			$data['message']=$this->Model_Admin->selectcustomer();
 			$this->load->view('user',$data);// 
 		}
 
@@ -124,6 +124,7 @@ public function selectcustomer(){
 		}
 
 
+//selecting Category
  public function selectCategory(){
 
    
@@ -149,6 +150,7 @@ public function selectbooking(){
 			$this->load->view('bookinguser',$data);// 
 		}
 
+//delete Booking
 	public function deletebooking($bookingid){
 		$this->load->model('Model_Admin');
 		$check=$this->Model_Admin->removebooking($bookingid);
@@ -159,11 +161,13 @@ public function selectbooking(){
 		}
 	}
 
+//logout
 	public function logout(){
 		$this->session->sess_destroy();
         redirect('home/login');
 	}
 
+//customer bill
 public function billcustomer(){
 
         $sessionData=$this->session->userdata('customerid');
@@ -177,13 +181,16 @@ public function billcustomer(){
         } 
        }
 
-/*public function customerorder(){
+       //customers orders
+
+public function customerorder(){
 	$this->load->Model("Model_Admin");
 	$data['message']=$this->Model_Admin->customerorder();
-	$this->load->view('customerorderlist',$data);*/
+	$this->load->view('customerorderlist',$data);
 
 
 	}	
+}
 
 
 	

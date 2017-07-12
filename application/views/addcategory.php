@@ -16,10 +16,12 @@
 				
 				
 				
-				<button type="submit" name="submit" value="Sign Up" class="btn-login"> Add Category </button>
+				<button type="submit" name="submit" value="Sign Up" class="btn-login"> Add Category </button> </br></br>
 				
-				
+				 <a href="<?php echo site_url("home/admindash");?>"> Back</a> </br> </br></br>
 			</form>
+
 		</div>
+		
 	</body>
 </html>	
